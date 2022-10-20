@@ -24,6 +24,14 @@
       state: latest
     when: ansible_distribution == "Ubuntu"
 
+  - name: start httpd
+    tags: apache2,httpd,ubuntu
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+    when: ansible_distribution == "ubuntu"
+
   - name: copy default html file for site
     tags: apache,apache2,httpd
     copy:
@@ -32,6 +40,19 @@
       owner: root
       group: root
       mode: 0644
+
+  - name: install unzip
+    package:
+      name: unzip
+
+  - name: install terraform
+    unarchive:
+      src: https://releases.hashicorp.com/terraform/1.3.3/terraform_1.3.3_linux_amd64.zip
+      dest: /usr/local/bin
+      remote_src: yes
+      mode: 0755
+      owner: root
+      group: root
 
 - hosts: db_servers
   become: true
