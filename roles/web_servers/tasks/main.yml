@@ -16,15 +16,9 @@
     lineinfile:
       path: /etc/apache2/apache2.conf
       regexp: '^ServerAdmin'
-      line: ServerAdmin somebody@somewhere.net
+      line: ServerAdmin somebody@somewhere.com
     when: ansible_distribution == "Ubuntu"
-    register: apache2
-
-  - name: restart apache2
-    service:
-      name: apache2
-      state: restarted
-    when: apache2.changed
+    notify: restart apache
 
   - name: copy default html file for site
     tags: apache,apache2,httpd
