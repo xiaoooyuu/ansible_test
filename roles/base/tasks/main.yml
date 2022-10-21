@@ -1,0 +1,5 @@
+  - name: add ssh key for xyla
+    tags: always
+    authorized_key:
+      user: xyla
+      key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDc4xP/mdHqfeO8khMXvG+3adsgCmsBd9vYlHxIPeRHlNOf0x6XipCJBftHz0NJ8YgGRGubTvTLCXLNNtOHQ8oWuIoOlZU148Enatqgq+PrOxfe0w2i2ljqHgrdCnOqDXyL9gaRbKpNzxFDyHIDtujbiwXNEEy/eETYO55Tu97qTodGYSVlCjWxWQaL0s4yUBF+NwiW9n+zJoMdfSwi+0vZqqn5qmNSfICVDKGeZ6IBGI/6BTjNz2vUU3ZaSfYNIADMn4g/d3Lgz8co6rSxK2NAkwGSOX+5xJ4EbP1F66hDFFp92b1gGiCj3dUtZpTWzB9xKIF1LFaFsBc4p/58pSzcX9r3kl8ZjaAWB1lpGmEq3fFTKg//3Vu7yxTQgNAFaGYl1jepOIPLjohSOCkZN0WXgU9Ysi176m6avjC4d3M5ZZX/LTtNHirSJnJId/+Tt5zU6Ezm8dH1kBPzuTmeMbIDPWYr15EnUaGapJbun8UuTNJfRZwnKVVJl7lWL8/HK50= root@ansible-xy"
