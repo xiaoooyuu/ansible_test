@@ -1,0 +1,6 @@
+  - name: create react app
+    tags: react,ubuntu
+    apt:
+      name:
+        - reactjs
+      state: latest

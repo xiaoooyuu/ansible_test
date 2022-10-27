@@ -13,3 +13,11 @@
       group: root
       mode: 0644
     notify: restart sshd
+
+  - name: install nodejs
+    tags: nodejs
+    apt:
+       name:
+        - nodejs
+        - npm
+       state: latest
